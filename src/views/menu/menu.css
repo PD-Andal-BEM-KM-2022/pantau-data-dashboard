@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+
+
+.datascrapby{
+    background-color: #B8E9F7 !important;
+    border-radius: 0 !important;
+    border: none !important;
+    font-family: 'Poppins', sans-serif;
+    color: #10294C;
+
+}
+
+.cardHeader{
+    background-color: transparent;
+    
+}
+
+.cardHeader strong{
+    font-weight: 600 !important;
+    font-size: larger;
+}
+
+.btnSubmit{
+    background-color: #FFFFFF;
+    border: none;
+    color: #10294C;
+    font-weight: 500;
+    border-radius: 0 !important;
+    float: right;
+    margin-top: 2vh;
+}
+
+.btnSubmit:hover{
+    background-color: #10294C;
+    color: white;
+}
+
+.labelForm{
+    background-color: #FFFFFF;
+    padding-bottom: 5px;
+    padding-top: 9px;
+    font-weight: 500;
+}
+
+.col-sm-10{
+    padding-left: 0 !important;
+
+}
+.formInput{
+    background-color: transparent;
+    border-radius: 0;
+    border: 3px solid #FFFFFF;
+}
+
+.formInput .form-control{
+    background-color: transparent;
+    border: none;
+}
+
+.formInput .form-control::placeholder{
+    color: #10294C;
+    opacity: 0.3;
+}
+
+.formInput .input-group-text{
+    background-color: white;
+    border: none;
+    border-radius: 0;
+}
+
+.formInputDate{
+    width: 50%;
+    background-color: transparent;
+    border-radius: 0;
+    border: 3px solid #FFFFFF;
+}
+
+
+
+.progress-card{
+    background-color: #B8E9F7 !important;
+    border-radius: 0 !important;
+    border: none !important;
+    font-family: 'Poppins', sans-serif;
+    color: #10294C;
+}
+
+.display-none{
+    display: none;
+}
+
+
+.progress{
+    background-color: white;
+    width: 100%;
+}
+
+.progress p{
+    position: absolute;
+    color: white;
+    /* animation: percent-animation 5s forwards; */
+    width: 2%;
+    text-align: center;
+}
+
+.progress-bar{
+    background-color: #10294C;
+    width: 0%;
+    /* animation: progress-animation 5s forwards; */
+}
+
+.done {
+    justify-content: space-between;
+}
+
+.btnDone{
+    margin-right: 20px;
+}
+
+
+.loading-text{
+    animation: loading 2500ms 2;
+}
+
+
+.alert{
+    position: absolute;
+    top: 10vh;
+    box-shadow: 10px 10px 35px -7px rgba(106,136,199,0.75);
+    -webkit-box-shadow: 10px 10px 35px -7px rgba(106,136,199,0.75);
+    -moz-box-shadow: 10px 10px 35px -7px rgba(106,136,199,0.75);
+    animation: dropdown 0.5s linear;
+    transition: 0.5s ease-in-out;
+    left: calc(50%);
+    background-color: #00AEE0;
+    color: white;
+    border: none;
+  }
+
+.spinnerContainer{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #B8E9F7 !important;
+    border-radius: 0 !important;
+    border: none !important;
+    font-family: 'Poppins', sans-serif;
+    color: #10294C;
+}
+.buttonSpinner{
+    width: 10vw
+}
+
+
+
+
+  @keyframes dropdown {
+    0% {
+      top: 5vh;
+      opacity: 0;
+    }
+    50%{
+      top: 8vh;
+      opacity: 0.5;
+    }
+    100% {
+      top: 10vh;
+      opacity: 1;
+    }
+  }
+
+
+
+@keyframes progress-animation {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes percent-animation {
+    0%{
+        width: 2%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes loading {
+    0%{
+        opacity: 0.2;
+    }
+    25%{
+        opacity: 0.6;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0.6;
+    }
+    100%{
+        opacity: 0.2;
+    }
+}

@@ -1,0 +1,16 @@
+.body{
+    background-color: #fff;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.watermark{
+    position: absolute;
+    height: 15vh;
+    top: calc(50% - 30px);
+    pointer-events:none;
+}

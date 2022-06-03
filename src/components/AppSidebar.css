@@ -1,0 +1,34 @@
+.bgNav
+{
+    background-color: #10294C;
+}
+
+.navBrand
+{
+    background-color: #FEF0D0;
+}
+
+.nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #FFFFFF !important;
+    
+}
+
+.nav-link.active{
+    color: #FFC700 !important;
+    border-right: 5px solid #FFC700;
+}
+
+.nav-title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px !important;
+    color: #FFFFFF !important;
+    text-transform: capitalize !important;
+    font-weight: 600 !important;
+
+}
+
+.nav-item:hover, .nav-group:hover{
+    background-color: rgb(39,62,94);
+}
