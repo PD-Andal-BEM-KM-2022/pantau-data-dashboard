@@ -26,6 +26,8 @@ import CIcon from '@coreui/icons-react'
 
 import avatar8 from './../../assets/images/avatars/8.jpg'
 
+import userIcon from 'src/assets/images/dashboard/userIcon.png'
+
 
 import styled from 'styled-components'
 
@@ -71,6 +73,13 @@ const AppHeaderDropdown = () => {
             <Link to="/dashboard" className="nav__to">
               <a className="nav__link">
                 Dashboard
+              </a>
+            </Link>
+          </li>
+          <li className="nav__item">
+            <Link to="/profile" className="nav__to">
+              <a className="nav__link">
+                <img src={userIcon} />
               </a>
             </Link>
           </li>
@@ -161,7 +170,9 @@ height: 100%;
   display: flex;
   align-items: center;
   height: 100% !important;
-
+}
+.nav__link img{
+  height: 50% !important; 
 }
 .nav__link:hover{
   color: #F04E23;

@@ -17,12 +17,14 @@ import dataWadasWordCloud from 'src/assets/json/wadas/wadas_WordCloud.json'
 import topLiked from 'src/assets/json/wadas/wadas_MostLiked.json'
 import topReplied from 'src/assets/json/wadas/wadas_MostReplied.json'
 import topRetweet from 'src/assets/json/wadas/wadas_MostRetweeted.json'
+import BarChart from 'src/components/BarChart/barchart'
 
 
 
 const Wadas = () =>{
 
     const slides = document.getElementsByClassName("datavis");
+    
 
     // // Next/previous controls
     function prev() {
@@ -47,7 +49,7 @@ const Wadas = () =>{
             if(slides[i].classList.contains("flex")){
                 slides[i].classList.replace("flex", "none")
                 var j = i
-                if(j+1 > 2){
+                if(j+1 > 3){
                     j = 0;
                     slides[0].classList.replace("none", "flex")
                     break;
@@ -75,12 +77,16 @@ const Wadas = () =>{
                             </CCardHeader>
                             <CCardBody>
                                 <div className='datavis line-chart flex'>
-                                    <h1>Line Chart</h1>
+                                    <h1>Time Series with Line Chart</h1>
                                     <LineChart jsonData={dataWadasLineChart}  />
                                 </div>
                                 <div className='datavis word-cloud none'>
                                     <h1>Word Cloud</h1>
                                     <img src={imgWordCloud} />
+                                </div>
+                                <div className='datavis bar-chart none'>
+                                    <h1>Emotional Analysis with Bar Chart</h1>
+                                    <BarChart />
                                 </div>
                                 <div className='datavis top5 none'>
                                     <div className='top3'>
@@ -167,7 +173,7 @@ const Container = styled.div`
     padding-left: 0 !important;
 }
 
-.line-chart{
+.line-chart, .bar-chart{
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -177,6 +183,12 @@ const Container = styled.div`
     border-bottom: 3px solid #10294C;
     padding-bottom: 5px;
 }
+
+.bar-chart h1{
+    border-bottom: 3px solid #10294C;
+    padding-bottom: 5px;
+}
+
 
 .word-cloud h1{
     text-align: center;
