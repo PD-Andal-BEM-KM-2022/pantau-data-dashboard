@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import ReactWordcloud from 'react-wordcloud';
 import React from 'react'
 import { Line } from 'react-chartjs-2';
 import {
@@ -39,7 +38,7 @@ const WodrCloud = () => {
             <strong>Testing Implementasi Line Chart</strong>
           </CCardHeader>
               <CCardBody >  */}
-              <ReactWordcloud words={words} />
+              {/* <ReactWordcloud words={words} /> */}
 
                {/* </CCardBody>
         </CCard>
