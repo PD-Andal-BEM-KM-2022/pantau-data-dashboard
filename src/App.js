@@ -21,7 +21,6 @@ const Register = React.lazy(() => import('./views/pages/register/Register'))
 const Page404 = React.lazy(() => import('./views/pages/page404/Page404'))
 const Page500 = React.lazy(() => import('./views/pages/page500/Page500'))
 
-
 // export const AuthContext = createContext()
 
 // const initialState = {
@@ -49,10 +48,9 @@ const Page500 = React.lazy(() => import('./views/pages/page500/Page500'))
 //         isAuthenticated: true,
 //         user: action.payload.user
 //       }
-        
+
 //   }
 // }
-
 
 class App extends Component {
   render() {
@@ -60,7 +58,7 @@ class App extends Component {
       <Router>
         <Suspense fallback={loading}>
           <Routes>
-            <Route exact path='/' name="Landing Page" element={<LandingPage />} />
+            <Route exact path="/" name="Landing Page" element={<LandingPage />} />
             <Route exact path="/login" name="Login Page" element={<Login />} />
             <Route exact path="/register" name="Register Page" element={<Register />} />
             <Route exact path="/404" name="Page 404" element={<Page404 />} />
