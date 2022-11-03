@@ -335,15 +335,17 @@ def index():  # put application's code here
     # If request method is POST, here
     print("IN")
     if request.method == "POST":
-        form_data = request.form
+        print("IN POST")
+        form_data = request.get_json(force=True)
+        print(form_data)
+        print(form_data["getTextQuery"])
 
-        keyword = form_data.get("keyword")
-
+        title = form_data["getProjectTitle"]
+        keyword = form_data["getTextQuery"]
         if len(keyword) == 0:
             keyword = ""
-
-        since = form_data.get("since")
-        until = form_data.get("until")
+        since = form_data["startDate"]
+        until = form_data["endDate"]
         output_data = scrap(keyword, since, until)
         # return render_template(
         #     "index.html",
@@ -352,7 +354,11 @@ def index():  # put application's code here
         #     since=since,
         #     until=until,
         # )
-        return output_data
+        print(output_data)
+        response = jsonify(output_data)
+        print(response)
+        response.headers.add("Access-Control-Allow-Origin", "*")
+        return response
     # If request method is GET, here
     else:
         keyword = ""
@@ -368,7 +374,6 @@ def index():  # put application's code here
         #     until=until,
         # )
         response = jsonify(output_data)
-
         # Enable Access-Control-Allow-Origin
         response.headers.add("Access-Control-Allow-Origin", "*")
         return response
