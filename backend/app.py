@@ -1,5 +1,4 @@
 # save this as app.py
-from black import out
 import requests
 from flask import Flask, request, render_template, url_for, jsonify
 import re
@@ -316,8 +315,8 @@ def scrap(keyword, since, until):
         for i in range(0, len(src_list)):
             sna_data["edges"].append({"from": src_list[i], "to": tgt_list[i]})
 
-        sna_json = json.dumps(sna_data).encode("utf-8")
-        open(PATH + "/static/sna.json", "wb").write(sna_json)
+        # sna_json = json.dumps(sna_data).encode("utf-8")
+        # open(PATH + "/static/sna.json", "wb").write(sna_json)
 
         output_data = {}
         output_data["most_retweet"] = most_tweet.values.tolist()
@@ -326,6 +325,7 @@ def scrap(keyword, since, until):
         output_data["hashtag_wordcloud"] = ht_text
         output_data["emotions"] = emotions_percentage
         output_data["tweet_count"] = tweet_count
+        output_data["sna"] = sna_data
 
         return output_data
 
@@ -345,16 +345,16 @@ def index():  # put application's code here
         if len(keyword) == 0:
             keyword = ""
         since = form_data["startDate"]
+        since = since.split("/")
+        since = since[2] + "-" + since[0] + "-" + since[1]
+
         until = form_data["endDate"]
+        until = until.split("/")
+        until = until[2] + "-" + until[0] + "-" + until[1]
+
         output_data = scrap(keyword, since, until)
-        # return render_template(
-        #     "index.html",
-        #     output_data=output_data,
-        #     keyword=keyword,
-        #     since=since,
-        #     until=until,
-        # )
         print(output_data)
+        output_data["title"] = title
         response = jsonify(output_data)
         print(response)
         response.headers.add("Access-Control-Allow-Origin", "*")
@@ -365,6 +365,8 @@ def index():  # put application's code here
         today = date.today()
         until = today.strftime("%Y-%m-%d")
         since = today - timedelta(days=7)
+        print(until)
+        print(since)
         output_data = scrap(keyword, since, until)
         # return render_template(
         #     "index.html",
