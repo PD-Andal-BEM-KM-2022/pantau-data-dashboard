@@ -330,7 +330,7 @@ def scrap(keyword, since, until):
         return output_data
 
 
-@app.route("/api/", methods=["GET", "POST"])
+@app.route("/scrape.json", methods=["GET", "POST"])
 def index():  # put application's code here
     # If request method is POST, here
 
