@@ -333,13 +333,9 @@ def scrap(keyword, since, until):
 @app.route("/", methods=["GET", "POST"])
 def index():  # put application's code here
     # If request method is POST, here
-    print("IN")
-    if request.method == "POST":
-        print("IN POST")
-        form_data = request.get_json(force=True)
-        print(form_data)
-        print(form_data["getTextQuery"])
 
+    if request.method == "POST":
+        form_data = request.get_json(force=True)
         title = form_data["getProjectTitle"]
         keyword = form_data["getTextQuery"]
         if len(keyword) == 0:
@@ -353,12 +349,8 @@ def index():  # put application's code here
         until = until[2] + "-" + until[0] + "-" + until[1]
 
         output_data = scrap(keyword, since, until)
-        print(output_data)
         output_data["title"] = title
         response = jsonify(output_data)
-        print(response)
-
-        response.headers.remove('Server')
         response.headers.add("Access-Control-Allow-Origin", "*")
         return response
     # If request method is GET, here
@@ -367,8 +359,6 @@ def index():  # put application's code here
         today = date.today()
         until = today.strftime("%Y-%m-%d")
         since = today - timedelta(days=7)
-        print(until)
-        print(since)
         output_data = scrap(keyword, since, until)
         # return render_template(
         #     "index.html",
@@ -384,4 +374,4 @@ def index():  # put application's code here
 
 
 if __name__ == "__main__":
-    app.run(port=8000)
+    app.run(host='0.0.0.0')
