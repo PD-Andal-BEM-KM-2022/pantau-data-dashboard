@@ -60,7 +60,11 @@
     "sass-loader": "^13.0.0",
     "simplebar-react": "^2.3.6",
     "styled-components": "^5.3.5",
+<<<<<<< HEAD
     "tippy": "^0.0.0"
+=======
+    "tippy.js": "^6.3.7"
+>>>>>>> e34c3a2909a212c97e918a6da97977eb32b2bc52
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.2",
