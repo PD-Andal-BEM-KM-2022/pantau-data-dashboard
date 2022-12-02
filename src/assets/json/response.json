@@ -1,0 +1,243 @@
+{
+  "emotions": [
+    33.8,
+    31.5,
+    31.3,
+    2.3,
+    1.1
+  ],
+  "frequency_freq": [
+    32,
+    26,
+    26,
+    25,
+    22,
+    21,
+    21,
+    21,
+    19,
+    19
+  ],
+  "frequency_word": [
+    "itaewon",
+    "orang",
+    "tragedi",
+    "rusia",
+    "lawan",
+    "bro",
+    "covid",
+    "november",
+    "gagal",
+    "oktober"
+  ],
+  "hashtag_wordcloud": "instagramdown jogja24jam pesonaimogiri therealbutejo JogjaElingLanWaspada KominfoDIY Jobseeker LowonganKerja LowkerJogja KominfoDIY Jobseeker LowonganKerja LowkerJogja KominfoDIY CekUrine GagalGinjalAkut GagalGinjalAkutAnak DinasKesehatanDIY KementrianKesehatanRI KominfoDIY TolakHoaksKominfoDIY BeritaHoaks Setitiatiati TolakHoaksKominfoDIY BeritaHoaks Setitiatiati TolakHoaksKominfoDIY BeritaHoaks Setitiatiati Instagram JogjaElingLanWaspada KominfoDIY PisahSambut SATRIYA KominfoDIY KominfoDIY CaraMengatasiHoaks Hoaks BeritaPalsu ApelPagiKominfoDIY KeterbukaanInformasiPublik JogjaSmartProvince KominfoDIY TolakHoaksKominfoDIY BeritaHoaks Setitiatiati KominfoDIY DishubDIY TransJogja AngkutanMurah JogjaElingLanWaspada KominfoDIY Regsosek2022 KominfoDIY AlternatifObatSirup SehatAnak KemenkesRI KominfoDIY TolakHoaksKominfoDIY BeritaHoaks Setitiatiati KominfoDIY JogjaElingLanWaspada KominfoDIY FIFAWorldCup instagramdown",
+  "most_retweet": [
+    [
+      "https://twitter.com/Jogja24Jam/status/1586639083505270784",
+      "anger",
+      390,
+      114
+    ],
+    [
+      "https://twitter.com/JogjaUpdate/status/1586683859294310400",
+      "happy",
+      192,
+      28
+    ],
+    [
+      "https://twitter.com/Jogja24Jam/status/1587033543040901120",
+      "anger",
+      113,
+      23
+    ],
+    [
+      "https://twitter.com/JogjaUpdate/status/1587396460257382401",
+      "sadness",
+      62,
+      11
+    ],
+    [
+      "https://twitter.com/JogjaUpdate/status/1586641602990133248",
+      "sadness",
+      33,
+      10
+    ],
+    [
+      "https://twitter.com/Jogja24Jam/status/1587064486686470150",
+      "anger",
+      28,
+      9
+    ],
+    [
+      "https://twitter.com/JogjaUpdate/status/1587042955655016449",
+      "sadness",
+      16,
+      9
+    ],
+    [
+      "https://twitter.com/tribunjogja/status/1586964386794852352",
+      "anger",
+      8,
+      8
+    ],
+    [
+      "https://twitter.com/Jogja24Jam/status/1587089529453715456",
+      "sadness",
+      19,
+      7
+    ],
+    [
+      "https://twitter.com/Jogja24Jam/status/1587085529023029250",
+      "anger",
+      12,
+      5
+    ]
+  ],
+  "sna": {
+    "edges": [
+      {
+        "from": "DistrikBaratPSS",
+        "to": "JogjaUpdate"
+      },
+      {
+        "from": "infomitigasi",
+        "to": "JogjaUpdate"
+      },
+      {
+        "from": "wirdan8",
+        "to": "JogjaUpdate"
+      },
+      {
+        "from": "ElvishArcher",
+        "to": "JogjaUpdate"
+      },
+      {
+        "from": "TRCBPBDDIY",
+        "to": "JogjaUpdate"
+      },
+      {
+        "from": "jitvofficial",
+        "to": "kominfodiy"
+      },
+      {
+        "from": "bkddiy",
+        "to": "kominfodiy"
+      },
+      {
+        "from": "infobmkgyia",
+        "to": "kominfodiy"
+      },
+      {
+        "from": "siarandigital",
+        "to": "kominfodiy"
+      },
+      {
+        "from": "humas_jogja",
+        "to": "kominfodiy"
+      },
+      {
+        "from": "Harian_Jogja",
+        "to": "kominfodiy"
+      },
+      {
+        "from": "polresjogja",
+        "to": "kominfodiy"
+      },
+      {
+        "from": "dishubdiy",
+        "to": "kominfodiy"
+      },
+      {
+        "from": "humas_jogja",
+        "to": "kominfodiy"
+      },
+      {
+        "from": "jitvofficial",
+        "to": "kominfodiy"
+      },
+      {
+        "from": "StaklimJogja",
+        "to": "kominfodiy"
+      },
+      {
+        "from": "dishubdiy",
+        "to": "kominfodiy"
+      },
+      {
+        "from": "polresjogja",
+        "to": "kominfodiy"
+      },
+      {
+        "from": "BPPTKG",
+        "to": "kominfodiy"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "DistrikBaratPSS"
+      },
+      {
+        "id": "infomitigasi"
+      },
+      {
+        "id": "wirdan8"
+      },
+      {
+        "id": "ElvishArcher"
+      },
+      {
+        "id": "TRCBPBDDIY"
+      },
+      {
+        "id": "jitvofficial"
+      },
+      {
+        "id": "bkddiy"
+      },
+      {
+        "id": "infobmkgyia"
+      },
+      {
+        "id": "siarandigital"
+      },
+      {
+        "id": "humas_jogja"
+      },
+      {
+        "id": "Harian_Jogja"
+      },
+      {
+        "id": "polresjogja"
+      },
+      {
+        "id": "dishubdiy"
+      },
+      {
+        "id": "humas_jogja"
+      },
+      {
+        "id": "jitvofficial"
+      },
+      {
+        "id": "StaklimJogja"
+      },
+      {
+        "id": "dishubdiy"
+      },
+      {
+        "id": "polresjogja"
+      },
+      {
+        "id": "BPPTKG"
+      },
+      {
+        "id": "JogjaUpdate"
+      },
+      {
+        "id": "kominfodiy"
+      }
+    ]
+  },
+  "title": "ss",
+  "tweet_count": 473
+}

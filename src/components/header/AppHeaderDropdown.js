@@ -46,11 +46,11 @@ const AppHeaderDropdown = () => {
     } else setIcon("nav__toggler");
   };
   const activePage = window.location.href;
-  console.log(activePage)
+  // console.log(activePage)
   setTimeout(function(){
     for(var i = 0; i < 2; i++){
       const navLinks = document.getElementsByClassName('nav__to').item(i)
-      console.log(navLinks.href)
+      // console.log(navLinks.href)
       if(navLinks.href == activePage){
         navLinks.classList.add('active');
       }
