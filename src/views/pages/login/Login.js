@@ -34,41 +34,41 @@ const Login = () => {
   
 
 
-  function checkAccount(){
-    var user = document.getElementById('username')
-    var pw = document.getElementById('password')
-    var success = document.getElementById('success')
-    var gagal = document.getElementById('gagal')
-    axios.get(`http://localhost:3000/account`)
-      .then(res => {
-        const account = res.data
-        var isValid = false
-        for(var i = 0; i < account.length; i++ ){
-          if(account[i].username == user.value){
-            if(account[i].password == pw.value){
-              isValid = true
-            }
-            else{isValid = false}
-            break
-          }
-        }
+  // function checkAccount(){
+  //   var user = document.getElementById('username')
+  //   var pw = document.getElementById('password')
+  //   var success = document.getElementById('success')
+  //   var gagal = document.getElementById('gagal')
+  //   axios.get(`http://localhost:3000/account`)
+  //     .then(res => {
+  //       const account = res.data
+  //       var isValid = false
+  //       for(var i = 0; i < account.length; i++ ){
+  //         if(account[i].username == user.value){
+  //           if(account[i].password == pw.value){
+  //             isValid = true
+  //           }
+  //           else{isValid = false}
+  //           break
+  //         }
+  //       }
 
-        if(isValid){
-          gagal.classList.remove("gagal")
-          success.classList.add("success")
-          // setTimeout(success.classList.remove("success"), 2000)
-          setTimeout(() => {
-            window.location.replace("http://localhost:3001/dashboard")
-          }, 2500)
-        }
-        else{
-          success.classList.remove("success")
-          gagal.classList.add("gagal")
-          // setTimeout(gagal.classList.remove("gagal"), 2000)
-        }
+  //       if(isValid){
+  //         gagal.classList.remove("gagal")
+  //         success.classList.add("success")
+  //         // setTimeout(success.classList.remove("success"), 2000)
+  //         setTimeout(() => {
+  //           window.location.replace("http://localhost:3001/dashboard")
+  //         }, 2500)
+  //       }
+  //       else{
+  //         success.classList.remove("success")
+  //         gagal.classList.add("gagal")
+  //         // setTimeout(gagal.classList.remove("gagal"), 2000)
+  //       }
 
-      })
-  }
+  //     })
+  // }
 
   return (
     <>
@@ -107,7 +107,7 @@ const Login = () => {
                         />
                       </CInputGroup>
                       <div className='divBtn'>
-                        <CButton color="primary" className="loginBtn px-4" onClick={checkAccount}>
+                        <CButton color="primary" className="loginBtn px-4">
                           Login
                         </CButton>
                       </div>

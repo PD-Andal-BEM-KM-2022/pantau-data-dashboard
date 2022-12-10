@@ -2,6 +2,7 @@ import React from 'react'
 import { AppContent, AppSidebar, AppFooter, AppHeader } from '../components/index'
 import './DefaultLayout.css'
 import Watermark from 'src/assets/images/watermark.png'
+import { DataProvider } from 'src/Context/DataContext'
 
 
 const DefaultLayout = () => {
@@ -14,7 +15,9 @@ const DefaultLayout = () => {
           <div className='img'>
             <img className='watermark' src={Watermark}/>
           </div>
-          <AppContent />
+          <DataProvider>
+            <AppContent />
+          </DataProvider>
         </div>
         {/* <AppFooter /> */}
       </div>

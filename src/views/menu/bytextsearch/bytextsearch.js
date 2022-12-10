@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
@@ -29,6 +29,7 @@ import { CDateRangePicker } from '@coreui/react-pro'
 import { DocsCallout, DocsExample } from 'src/components'
 
 import '../menu.css'
+import { DataContext } from 'src/Context/DataContext'
 
 const ByTextSeacrh = () => {
   const datascrapby = document.getElementsByClassName('datascrapby')
@@ -50,31 +51,24 @@ const ByTextSeacrh = () => {
   const inputTweetCount = document.getElementsByClassName('inputTweetCount2')
   const inputDate = document.getElementsByClassName('form-control')
 
-  function submitInput(e) {
+  const { data, setData ,fetchStatus, functions, getData } = useContext(DataContext)
+  const { fetchData } = functions
+
+
+
+  async function submitInput(e) {
     e.preventDefault()
     checkInput()
     const input = JSON.stringify(getInput())
     // const input = getInput()
     console.log(input)
 
-    axios({
-      method: 'post',
-      url: 'http://127.0.0.1:5000/',
-      data: input,
-    })
-      .then((res) => {
-        console.log(res.data)
-        console.log('SUCCESS')
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-
     var isValid = checkInput()
     if (isValid) {
       datascrapby[0].classList.add('display-none')
       spinnerContainer[0].classList.remove('display-none')
       alert[0].classList.add('display-none')
+      await fetchData(input)  
       setTimeout(() => {
         spinnerContainer[0].classList.add('display-none')
         progressCard[0].classList.remove('display-none')
@@ -84,17 +78,17 @@ const ByTextSeacrh = () => {
         setTimeout(() => {
           progressContainer[1].classList.remove('display-none')
           increment(1, 20)
-        }, 9000)
+        }, 5000)
         setTimeout(() => {
           progressContainer[2].classList.remove('display-none')
           increment(2, 10)
-        }, 14000)
+        }, 9000)
 
         setTimeout(() => {
           done[0].classList.remove('display-none')
           done[0].style.display = 'flex'
-        }, 17000)
-      }, 3000)
+        }, 12000)
+      }, 1000)
     } else {
       alert[0].classList.remove('display-none')
     }
@@ -137,19 +131,20 @@ const ByTextSeacrh = () => {
   function increment(a, interval) {
     var x = 0.5,
       y = '%',
-      z
-    setInterval(() => {
+      z = 0
+    var intervalID = setInterval(() => {
       z = x + y
       progressBar[a].style.width = z
       percent[a].style.width = z
       percent[a].innerHTML = `${x}%`
       if (x >= 100) {
-        clearInterval()
+        clearInterval(intervalID)
       } else {
         x += 0.5
       }
     }, interval)
   }
+  
 
   function getInput() {
     const getProjectTitle = inputProjectTitle[0].value

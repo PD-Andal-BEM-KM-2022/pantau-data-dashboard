@@ -11,14 +11,8 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
-import {
-  CCard,
-  CCardBody,
-  CCardHeader,
-  CRow,
-} from '@coreui/react'
 
-import Helmet from 'react-helmet';
+
 
 
 const LineChart = (props) => {

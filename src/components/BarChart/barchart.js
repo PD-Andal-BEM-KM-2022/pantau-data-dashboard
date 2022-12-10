@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Bar} from 'react-chartjs-2';
 import {
     Chart as ChartJS,
@@ -10,11 +10,16 @@ import {
     Tooltip,
     Legend,
   } from 'chart.js';
+import { DataContext } from 'src/Context/DataContext';
 
-import Helmet from 'react-helmet';
 
 
 const BarChart = () => {
+
+  const data = JSON.parse(window.localStorage.getItem('data'))
+
+
+    const data_emotions = data.emotions
 
     ChartJS.register(
         CategoryScale,
@@ -50,18 +55,7 @@ const BarChart = () => {
     //     ],
     //   };
 
-    const labels = ['Angry', 'Happy', 'Sadness', 'Love', 'Fear'];
 
-    const data = {
-        labels,
-        datasets: [
-          {
-            label: 'Dataset',
-            data: [500,100,400,150,300],
-            backgroundColor: 'rgba(255, 99, 132, 0.5)',
-          },
-        ],
-      }; 
     
     //   const options = {
     //     responsive: true,
@@ -105,7 +99,22 @@ const BarChart = () => {
         },
       };
 
+  
 
+
+
+  const labels = ['Happy', 'Angry', 'Sadness', 'Love', 'Fear'];
+
+  const datas = {
+      labels,
+      datasets: [
+        {
+          label: 'Dataset',
+          data: data_emotions,
+          backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        },
+      ],
+    }; 
 
   
 
@@ -120,7 +129,7 @@ const BarChart = () => {
               <CCardBody > */}
                 <Bar
                   options={options}
-                  data={data}
+                  data={datas}
                 />
               {/* </CCardBody>
         </CCard>

@@ -21,7 +21,7 @@ function NavbarTest() {
   setTimeout(function(){
     for(var i = 0; i < 2; i++){
       const navLinks = document.getElementsByClassName('nav__to').item(i)
-      if(navLinks.href == activePage){
+      if(navLinks.href === activePage){
         navLinks.classList.add('active');
       }
     }  
