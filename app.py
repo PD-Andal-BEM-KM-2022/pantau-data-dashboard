@@ -1,6 +1,7 @@
 # save this as app.py
 import requests
 from flask import Flask, request, render_template, url_for, jsonify
+from flask_cors import CORS
 import re
 from datetime import date, timedelta
 import pandas as pd
@@ -44,6 +45,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from wordcloud import WordCloud
 
 app = Flask(__name__)
+CORS(app)
 PATH = os.getcwd()
 
 alay_dict = pd.read_csv(
